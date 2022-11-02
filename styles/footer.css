@@ -1,0 +1,135 @@
+.footer{
+    margin-top: var(--section-gap);
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.footer__inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5rem 0 1rem;
+}
+
+.footer__branding{
+    width: 100%;
+    margin-bottom: 1rem;
+    font-family: var(--font-branding);
+    font-size: var(--font-size-0);
+    text-transform: uppercase;
+}
+
+.footer__text{
+    max-width: 448px;
+    line-height: 1.5;
+}
+
+.newsletter{
+    max-width: 256px;
+    width: 100%;
+}
+
+.newsletter__form{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--inner-gap-small);
+}
+
+.newsletter__form::after{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    height: 2px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: var(--color-secondary);
+}
+
+.newsletter__title{
+    margin-bottom: 1rem;
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-bold);
+}
+
+.newsletter__input{
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--color-primary-50);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-1);
+}
+
+.newsletter__input:focus{
+    outline: none;
+}
+
+.newsletter__input, select, textarea{
+    color: var(--color-secondary);
+}
+
+.newsletter__button{
+    padding: 0;
+    width: 18px;
+    border: none;
+    border-radius: 0;
+    background: none;
+}
+
+.newsletter__button:hover{
+    border: none;
+    padding: 0;
+}
+
+.newsletter__button::before, .newsletter__button::after, .newsletter__button:hover::before, .newsletter__button:hover::after{
+    display: none;
+}
+
+.footer__copyright{
+    margin: 5rem 0 1rem;
+    width: 100%;
+    color: var(--color-secondary-50);
+    font-size: var(--font-size-0);
+    text-align: center;
+}
+
+@media screen and (max-width: 832px) {
+    .footer__inner{
+        margin-top: 4rem;
+    }
+
+    .footer__text{
+        max-width: 344px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .footer__inner{
+        justify-content: center;
+    }
+
+    .footer__branding{
+        text-align: center;
+    }
+
+    .footer__text{
+        margin-bottom: 3rem;
+    }
+
+    .footer .newsletter{
+        max-width: 344px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .footer__inner{
+        margin-top: 3rem;
+    }
+
+    .footer__branding{
+        text-align: left;
+    }
+}
