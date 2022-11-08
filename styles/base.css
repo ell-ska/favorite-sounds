@@ -331,20 +331,6 @@ a{
     background-color: var(--color-primary-50);
 }
 
-@media screen and (hover: none) {
-    .album__meta{
-        pointer-events: none;
-    }
-
-    .gallery .album:hover::before{
-        opacity: 0;
-    }
-    
-    .gallery .album:hover .album__meta{
-        opacity: 0;
-    }
-}
-
 @media screen and (max-width: 768px) {
     .section__title h2{
         font-size: var(--font-size-1);
@@ -358,5 +344,20 @@ a{
 
     .album__meta > div{
         font-size: var(--font-size-0);
+    }
+}
+
+/* Touch device */
+@media screen and (hover: none) {
+    .album__meta{
+        pointer-events: none;
+    }
+
+    .gallery .album:hover::before{
+        opacity: 0;
+    }
+    
+    .gallery .album:hover .album__meta{
+        opacity: 0;
     }
 }
