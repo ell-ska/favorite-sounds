@@ -56,8 +56,6 @@ img{
 
 .container--locked{
     position: fixed;
-    height: 100vh;
-    width: 100vw;
 }
 
 section, header, footer{
@@ -327,6 +325,7 @@ a{
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 980;
     height: 100vh;
     width: 100vw;
     background-color: var(--color-primary-50);

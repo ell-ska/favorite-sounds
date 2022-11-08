@@ -3,23 +3,29 @@ const albumPreview = () => {
     const container = document.querySelector('.container')
     const albums = document.querySelectorAll('.album')
 
-    const closePreview = (event) => {
-        event.target.parentNode.remove()
-        container.classList.remove('container--locked')
-        document.querySelector('.album__underlay').remove()
-    }
-
     const openPreview = (event) => {
 
         // get "about the song link"
         const linkToSong = event.target.querySelector('.album__meta').getAttribute('href')
 
+        // create full-page background
+        const underlay = document.createElement('div')
+        underlay.classList.add('album__underlay')
+        document.body.appendChild(underlay)
+
         // create extra album to use as overlay
         const overlayAlbum = event.target.cloneNode(true)
         overlayAlbum.classList.add('album--open')
-        document.body.appendChild(overlayAlbum)
+        underlay.appendChild(overlayAlbum)
 
-        // create close button
+        // close button
+        const closePreview = (event) => {
+        event.target.parentNode.remove()
+        container.classList.remove('container--locked')
+        document.querySelector('.album__underlay').remove()
+        window.scrollTo(0, scrollPosition)
+        }
+
         const closeButton = document.createElement('button')
         closeButton.classList.add('album__button')
         overlayAlbum.appendChild(closeButton)
@@ -39,13 +45,10 @@ const albumPreview = () => {
         albumLink.classList.add('album__link')
         overlayAlbum.appendChild(albumLink)
 
-        // create full-page background
-        const underlay = document.createElement('div')
-        underlay.classList.add('album__underlay')
-        document.body.appendChild(underlay)
-
         // lock container from scrolling
+        const scrollPosition = window.scrollY
         container.classList.add('container--locked')
+        container.style.top = '-'+scrollPosition+'px'
 
     }
 
