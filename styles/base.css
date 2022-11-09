@@ -360,4 +360,12 @@ a{
     .gallery .album:hover .album__meta{
         opacity: 0;
     }
+
+    .container .album:hover::before{
+        opacity: 0;
+    }
+    
+    .container .album:hover .album__meta{
+        opacity: 0;
+    }
 }
