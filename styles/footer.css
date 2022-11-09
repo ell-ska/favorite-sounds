@@ -29,6 +29,12 @@
     width: 100%;
 }
 
+.newsletter__title{
+    margin-bottom: 1rem;
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-bold);
+}
+
 .newsletter__form{
     position: relative;
     display: flex;
@@ -45,12 +51,6 @@
     width: 100%;
     border-radius: 2px;
     background-color: var(--color-secondary);
-}
-
-.newsletter__title{
-    margin-bottom: 1rem;
-    font-size: var(--font-size-1);
-    font-weight: var(--font-weight-bold);
 }
 
 .newsletter__input{
@@ -76,6 +76,7 @@
     border: none;
     border-radius: 0;
     background: none;
+    cursor: pointer;
 }
 
 .newsletter__button:hover{

@@ -49,6 +49,23 @@ img{
     height: auto;
 }
 
+fieldset{
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.screen-reader-only{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
 /* Layout */
 .container{
     overflow: hidden;
