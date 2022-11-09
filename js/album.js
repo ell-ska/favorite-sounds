@@ -31,6 +31,15 @@ const albumPreview = () => {
         overlayAlbum.appendChild(closeButton)
         closeButton.addEventListener('click', closePreview)
 
+        // close by tapping outside album
+        const closePreviewWithUnderlay = (event) => {
+            event.target.remove()
+            container.classList.remove('container--locked')
+            window.scrollTo(0, scrollPosition)
+        }
+
+        underlay.addEventListener('click', closePreviewWithUnderlay)
+
         // create link
         const albumLink = document.createElement('a')
         albumLink.innerText = 'About the song'
