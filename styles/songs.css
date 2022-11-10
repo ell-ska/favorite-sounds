@@ -1,47 +1,47 @@
-.all-songs__inner{
+.all-songs__inner {
     margin-top: calc(var(--inner-gap) + 100px);
 }
 
-.all-songs__title{
+.all-songs__title {
     margin: 0 0 var(--inner-gap);
 }
 
-.gallery{
+.gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--inner-gap);
 }
 
-.gallery__image--big{
+.gallery__image--big {
     grid-column: span 2;
     grid-row: span 2;
 }
 
-.gallery__image--extra{
+.gallery__image--extra {
     display: none;
 }
 
 @media screen and (max-width: 768px) {
-    .gallery{
+    .gallery {
         --inner-gap: 1rem;
     }
 }
 
 @media screen and (max-width: 375px) {
-    .gallery{
+    .gallery {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .gallery__image--extra{
+    .gallery__image--extra {
         display: block;
     }
 
-    .gallery__image:nth-of-type(3){
+    .gallery__image:nth-of-type(3) {
         grid-column: span 1;
         grid-row: span 1;
     }
 
-    .gallery__image:nth-of-type(5){
+    .gallery__image:nth-of-type(5) {
         grid-column: span 2;
         grid-row: span 2;
     }

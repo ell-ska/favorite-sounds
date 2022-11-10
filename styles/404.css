@@ -1,4 +1,4 @@
-.page-not-found__inner{
+.page-not-found__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -6,77 +6,77 @@
     min-height: calc(100vh - 100px);
 }
 
-.page-not-found__text{
+.page-not-found__text {
     max-width: 448px;
 }
 
-.page-not-found__text h2{
+.page-not-found__text h2 {
     margin-bottom: 17px;
     font-size: var(--font-size-4);
 }
 
-.page-not-found__text h3{
+.page-not-found__text h3 {
     margin-bottom: 16px;
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-bold);
 }
 
-.page-not-found__text p{
+.page-not-found__text p {
     margin-bottom: 2rem;
     font-size: var(--font-size-2);
     line-height: 1.6;
 }
 
-.page-not-found__buttons{
+.page-not-found__buttons {
     display: flex;
     flex-grow: 0;
     gap: 1rem;
 }
 
-.page-not-found__image{
+.page-not-found__image {
     position: relative;
     justify-self: center;
     max-width: 400px;
     width: 100%;
 }
 
-.page-not-found__image > img{
+.page-not-found__image > img {
     transform: rotate(46deg);
     animation: rotateRecord 30s linear infinite;
 }
 
-.page-not-found__image > div >img{
+@keyframes rotateRecord {
+    0% {
+        transform: rotate(0deg);
+    } 100% {
+        transform: rotate(360deg);
+    }
+}
+
+.page-not-found__image > div >img {
     position: absolute;
     width: 45%;
     top: 10%;
     right: 0;
 }
 
-@keyframes rotateRecord {
-    0%{
-        transform: rotate(0deg);
-    } 100%{
-        transform: rotate(360deg);
-    }
-}
-
-.footer{
+.footer {
     margin-top: 0;
 }
 
 @media screen and (max-width: 880px) {
 
-    .page-not-found__inner{
+    .page-not-found__inner {
         grid-template-columns: 1fr;
         gap: var(--inner-gap);
     }
 
-    .page-not-found__content{
+    .page-not-found__content {
         order: 2;
         margin-bottom: var(--section-gap);
     }
 
-    .page-not-found__image{
+    .page-not-found__image {
         max-width: 300px;
     }
 
@@ -84,21 +84,21 @@
 
 @media screen and (max-width: 405px) {
 
-    .page-not-found__buttons{
+    .page-not-found__buttons {
         flex-direction: column;
     }
 
-    .page-not-found__text h2{
+    .page-not-found__text h2 {
         margin-bottom: 10px;
         font-size: var(--font-size-2);
     }
 
-    .page-not-found__text h3{
+    .page-not-found__text h3 {
         margin-bottom: 8px;
         font-size: var(--font-size-3);
     }
 
-    .page-not-found__text p{
+    .page-not-found__text p {
         margin-bottom: 2rem;
         font-size: var(--font-size-1);
         line-height: 1.5;

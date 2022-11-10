@@ -1,70 +1,72 @@
 const albumPreview = () => {
 
-    const container = document.querySelector('.container')
-    const albums = document.querySelectorAll('.album')
+    const CONTAINER = document.querySelector('.container');
+    const ALBUMS = document.querySelectorAll('.album');
 
     const openPreview = (event) => {
 
         // get "about the song link"
-        const linkToSong = event.target.querySelector('.album__meta').getAttribute('href')
+        const LINK_TO_SONG = event.target.querySelector('.album__meta').getAttribute('href');
 
-        // create full-page background
-        const underlay = document.createElement('div')
-        underlay.classList.add('album__underlay')
-        document.body.appendChild(underlay)
+        // create full-page see through background
+        const UNDERLAY = document.createElement('div');
+        UNDERLAY.classList.add('album__underlay');
+        document.body.appendChild(UNDERLAY);
 
         // create extra album to use as overlay
-        const overlayAlbum = event.target.cloneNode(true)
-        overlayAlbum.classList.add('album--open')
-        underlay.appendChild(overlayAlbum)
+        const OVERLAY_ALBUM = event.target.cloneNode(true);
+        OVERLAY_ALBUM.classList.add('album--open');
+        UNDERLAY.appendChild(OVERLAY_ALBUM);
 
-        // close button
+        // close preview with button
         const closePreview = (event) => {
-        event.target.parentNode.remove()
-        container.classList.remove('container--locked')
-        document.querySelector('.album__underlay').remove()
-        window.scrollTo(0, scrollPosition)
+        event.target.parentNode.remove();
+        CONTAINER.classList.remove('container--locked');
+        document.querySelector('.album__underlay').remove();
+        window.scrollTo(0, SCROLL_POSITION);
+        CONTAINER.style.top = null;
         }
 
-        const closeButton = document.createElement('button')
-        closeButton.classList.add('album__button')
-        overlayAlbum.appendChild(closeButton)
-        closeButton.addEventListener('click', closePreview)
+        const CLOSE_BUTTON = document.createElement('button');
+        CLOSE_BUTTON.classList.add('album__button');
+        OVERLAY_ALBUM.appendChild(CLOSE_BUTTON);
+        CLOSE_BUTTON.addEventListener('click', closePreview);
 
-        // close by tapping outside album
+        // close preview by tapping outside album
         const closePreviewWithUnderlay = (event) => {
-            event.target.remove()
-            container.classList.remove('container--locked')
-            window.scrollTo(0, scrollPosition)
+            event.target.remove();
+            CONTAINER.classList.remove('container--locked');
+            window.scrollTo(0, SCROLL_POSITION);
+            CONTAINER.style.top = null;
         }
 
-        underlay.addEventListener('click', closePreviewWithUnderlay)
+        UNDERLAY.addEventListener('click', closePreviewWithUnderlay);
 
         // create link
-        const albumLink = document.createElement('a')
-        albumLink.innerText = 'About the song'
+        const ALBUM_LINK = document.createElement('a');
+        ALBUM_LINK.innerText = 'About the song';
 
         // assign value to href
-        if (linkToSong){
-            albumLink.setAttribute('href', linkToSong)
+        if (LINK_TO_SONG){
+            ALBUM_LINK.setAttribute('href', LINK_TO_SONG);
         } else {
-            albumLink.setAttribute('href', '404.html')
+            ALBUM_LINK.setAttribute('href', '404.html');
         }
 
-        albumLink.classList.add('album__link')
-        overlayAlbum.appendChild(albumLink)
+        ALBUM_LINK.classList.add('album__link');
+        OVERLAY_ALBUM.appendChild(ALBUM_LINK);
 
         // lock container from scrolling
-        const scrollPosition = window.scrollY
-        container.classList.add('container--locked')
-        container.style.top = '-'+scrollPosition+'px'
+        const SCROLL_POSITION = window.scrollY;
+        CONTAINER.classList.add('container--locked');
+        CONTAINER.style.top = '-'+SCROLL_POSITION+'px';
 
     }
 
-    albums.forEach(album => {
-        album.addEventListener('click', openPreview)
+    ALBUMS.forEach(album => {
+        album.addEventListener('click', openPreview);
     });
 
 }
 
-albumPreview()
+albumPreview();

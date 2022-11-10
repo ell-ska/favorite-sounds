@@ -1,35 +1,35 @@
 const headerScrollAnimation = () => {
 
-    const header = document.querySelector('.header')
-    let previousScroll = 0
+    const HEADER = document.querySelector('.header');
+    let previousScroll = 0;
     
     const addAnimationClass = () => {
         
-        const currentScroll = window.scrollY
+        const CURRENT_SCROLL = window.scrollY;
         
-        if (currentScroll > previousScroll && currentScroll > 50){
-            header.classList.add('header--scrolled')
+        if (CURRENT_SCROLL > previousScroll && CURRENT_SCROLL > 50){
+            HEADER.classList.add('header--scrolled');
         } else {
-            header.classList.remove('header--scrolled')
+            HEADER.classList.remove('header--scrolled');
         }
 
-        previousScroll = currentScroll
+        previousScroll = CURRENT_SCROLL;
     }
 
     const addSizeClass = () => {
 
-        const currentScroll = window.scrollY
+        const CURRENT_SCROLL = window.scrollY;
 
-        if (currentScroll > 100){
-            header.classList.add('header--small')
+        if (CURRENT_SCROLL > 100){
+            HEADER.classList.add('header--small');
         } else {
-            header.classList.remove('header--small')
+            HEADER.classList.remove('header--small');
         }
     }
 
-    window.addEventListener('scroll', addAnimationClass)
-    window.addEventListener('scroll', addSizeClass)
+    window.addEventListener('scroll', addAnimationClass);
+    window.addEventListener('scroll', addSizeClass);
     
 }
 
-headerScrollAnimation()
+headerScrollAnimation();

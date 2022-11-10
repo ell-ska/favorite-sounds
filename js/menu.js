@@ -1,19 +1,18 @@
 const menu = () => {
 
-    const menuButton = document.querySelector('.menu__button')
-    const container = document.querySelector('.container')
-    const header = document.querySelector('.header')
+    const MENU_BUTTON = document.querySelector('.menu__button');
+    const CONTAINER = document.querySelector('.container');
+    const HEADER = document.querySelector('.header');
 
     const openMenu = () => {
 
-        header.classList.toggle('header--menu-open')
-
-        container.classList.toggle('container--locked')
+        HEADER.classList.toggle('header--menu-open');
+        CONTAINER.classList.toggle('container--locked');
 
     }
 
-    menuButton.addEventListener('click', openMenu)
+    MENU_BUTTON.addEventListener('click', openMenu);
 
 }
 
-menu()
+menu();

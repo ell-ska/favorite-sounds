@@ -1,198 +1,198 @@
-.song-header__inner{
+.song-header__inner {
     margin: calc(3rem + 100px) auto 3rem;
 }
 
-.song-header__title{
+.song-header__title {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.song-header__title h2{
+.song-header__title h2 {
     margin-bottom: 13px;
     color: var(--color-accent);
     font-size: var(--font-size-6);
     font-weight: var(--font-weight-bold);
 }
 
-.song-header__title h3{
+.song-header__title h3 {
     font-size: var(--font-size-4);
 }
 
-.song-main__inner{
+.song-main__inner {
     display: grid;
     grid-template-columns: var(--grid-container-inner);
     column-gap: var(--inner-gap);
 }
 
-.lyrics{
+.lyrics {
     grid-column: 1 / 8;
 }
 
-.lyrics__title{
+.lyrics__title {
     margin-bottom: 3rem;
 }
 
-.lyrics__title h2{
+.lyrics__title h2 {
     font-size: var(--font-size-1);
 }
 
-.lyrics__text{
+.lyrics__text {
     font-size: var(--font-size-2);
     line-height: 1.6;
 }
 
-.lyrics__text > div{
+.lyrics__text > div {
     margin-bottom: 2rem;
 }
 
-.lyrics__text > div:last-of-type{
+.lyrics__text > div:last-of-type {
     margin: 0;
 }
 
-.lyrics__button{
+.lyrics__button {
     margin-top: 2rem;
 }
 
-.meta{
+.meta {
     grid-column: 8 / -1;
 }
 
-.album-songs{
+.album-songs {
     margin-top: 4rem;
 }
 
-.album-songs__title{
+.album-songs__title {
     margin-bottom: 3px;
     color: var(--color-accent);
     font-size: var(--font-size-2);
     font-weight: var(--font-weight-bold);
 }
 
-.album-songs__tracklist{
+.album-songs__tracklist {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 3rem;
 }
 
-.album-songs__tracklist > div{
+.album-songs__tracklist > div {
     counter-reset: tracks;
 }
 
-.album-songs__left, .album-songs__right{
+.album-songs__left, .album-songs__right {
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
 }
 
-.album-songs__left{
+.album-songs__left {
     padding-right: 2rem;
 }
 
-.album-songs__track span{
+.album-songs__track span {
     position: relative;
     line-height: 1.5;
 }
 
-.album-songs__track--active span::after{
+.album-songs__track--active span::after {
     content: '';
     position: absolute;
-    left: -16px;
-    top: -8px;
     z-index: -1;
-    height: calc(100% + 16px);
+    top: -8px;
+    left: -16px;
     width: calc(100% + 32px);
+    height: calc(100% + 16px);
     border: 2px solid var(--color-accent);
     border-radius: 25px;
 }
 
-.album-songs__track span::before{
-    counter-increment: tracks;
+.album-songs__track span::before {
     content: counter(tracks) '. ';
+    counter-increment: tracks;
 }
 
-.meta__artist-image{
+.meta__artist-image {
     margin-top: 4rem;
 }
 
-.meta__credits{
+.meta__credits {
     margin-top: 4rem;
 }
 
-.meta__credits-title{
+.meta__credits-title {
     color: var(--color-accent);
     font-size: var(--font-size-2);
     font-weight: var(--font-weight-bold);
 }
 
-.meta__credits-property{
+.meta__credits-property {
     margin-top: 2rem;
     font-size: var(--font-size-0);
 }
 
-.meta__credits-value{
+.meta__credits-value {
     margin-top: 5px;
 }
 
 @media screen and (max-width: 768px) {
-    .song-header__title h2{
+    .song-header__title h2 {
         margin-bottom: 4px;
         font-size: var(--font-size-4);
     }
 
-    .song-header__title h3{
+    .song-header__title h3 {
         font-size: var(--font-size-2);
     }
 
-    .lyrics{
+    .lyrics {
         grid-column: 1 / -1;
         margin-bottom: var(--section-gap);
     }
 
-    .meta{
+    .meta {
         grid-column: 1 / -1;
     }
 
-    .album-songs__tracklist{
+    .album-songs__tracklist {
         margin-top: 2rem;
     }
 }
 
 @media screen and (max-width: 375px) {
-    .song-header__inner{
+    .song-header__inner {
         margin-bottom: 2rem;
     }
 
-    .lyrics__title{
+    .lyrics__title {
         margin-bottom: 2rem;
     }
 
-    .lyrics__text{
+    .lyrics__text {
         font-size: var(--font-size-1);
         line-height: 1.5;
     }
 
-    .lyrics__text > div{
+    .lyrics__text > div {
         margin-bottom: 1.5rem;
     }
 
-    .lyrics__button{
+    .lyrics__button {
         width: 100%;
     }
 
-    .meta > div{
+    .meta > div {
         margin-top: 3rem;
     }
 
-    .meta > div:first-of-type{
+    .meta > div:first-of-type {
         margin-top: 0;
     }
 
-    .album-songs__tracklist{
+    .album-songs__tracklist {
         font-size: var(--font-size-0);
     }
 
-    .album-songs__left, .album-songs__right{
+    .album-songs__left, .album-songs__right {
         row-gap: 1rem;
     }
 }

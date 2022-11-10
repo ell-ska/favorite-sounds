@@ -1,4 +1,4 @@
-:root{
+:root {
     --section-gap: 7rem;
     --inner-gap: 2rem;
 
@@ -30,7 +30,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    :root{
+    :root {
         --section-gap: 5rem;
 
         --grid-container: minmax(1.5rem, 1fr) minmax(0, 42rem) minmax(1.5rem, 1fr);
@@ -39,7 +39,7 @@
 }
 
 @media screen and (max-width: 375px) {
-    :root{
+    :root {
         --section-gap: 4rem;
         --inner-gap: 1rem;
 
