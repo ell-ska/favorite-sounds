@@ -47,7 +47,7 @@ const albumPreview = () => {
         ALBUM_LINK.innerText = 'About the song';
 
         // assign value to href
-        if (LINK_TO_SONG){
+        if (LINK_TO_SONG) {
             ALBUM_LINK.setAttribute('href', LINK_TO_SONG);
         } else {
             ALBUM_LINK.setAttribute('href', '404.html');

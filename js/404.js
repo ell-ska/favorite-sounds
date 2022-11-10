@@ -8,11 +8,11 @@ const pageDoesNotExist = () => {
         event.preventDefault();
         const HREF = event.target.getAttribute('href');
 
-        if(HREF){
+        if (HREF) {
             location.href = HREF;
         } else {
             location.href = '404.html';
-        };
+        }
 
     }
 

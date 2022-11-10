@@ -7,7 +7,7 @@ const headerScrollAnimation = () => {
         
         const CURRENT_SCROLL = window.scrollY;
         
-        if (CURRENT_SCROLL > previousScroll && CURRENT_SCROLL > 50){
+        if (CURRENT_SCROLL > previousScroll && CURRENT_SCROLL > 50) {
             HEADER.classList.add('header--scrolled');
         } else {
             HEADER.classList.remove('header--scrolled');
@@ -20,7 +20,7 @@ const headerScrollAnimation = () => {
 
         const CURRENT_SCROLL = window.scrollY;
 
-        if (CURRENT_SCROLL > 100){
+        if (CURRENT_SCROLL > 100) {
             HEADER.classList.add('header--small');
         } else {
             HEADER.classList.remove('header--small');
