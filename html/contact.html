@@ -55,15 +55,15 @@
                     <h2>Do you have a song I <span>NEED</span> to add?</h2>
                     <h3>Let me know!</h3>
                 </div>
-                <form action="" method="get" class="contact__form">
+                <form action="mailto:ella@skagerstrom.se" method="post" enctype="text/plain" class="contact__form">
                     <fieldset>
                         <legend class="screen-reader-only">Send me a message</legend>
                         <label for="name" class="screen-reader-only">Enter your name</label>
-                        <input type="text" name="contact" id="name" placeholder="Name" required>
+                        <input type="text" name="name" id="name" placeholder="Name" required>
                         <label for="email" class="screen-reader-only">Enter your email</label>
-                        <input type="email" name="contact" id="email" placeholder="Email" required>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
                         <label for="message" class="screen-reader-only">Enter your message</label>
-                        <textarea name="contact" id="message" placeholder="Message" required></textarea>
+                        <textarea name="message" id="message" placeholder="Message" required></textarea>
                         <button type="submit" class="button">Send</button>
                     </fieldset>
                 </form>
