@@ -7,8 +7,11 @@ const pageDoesNotExist = () => {
 
         event.preventDefault();
         const HREF = event.target.getAttribute('href');
+        const TARGET = event.target.getAttribute('target');
 
-        if (HREF) {
+        if (HREF && TARGET) {
+            window.open(HREF, TARGET);
+        } else if (HREF) {
             location.href = HREF;
         } else {
             location.href = '404.html';
