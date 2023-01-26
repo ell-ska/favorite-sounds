@@ -14,7 +14,11 @@ const pageDoesNotExist = () => {
         } else if (HREF) {
             location.href = HREF;
         } else {
-            location.href = '404.html';
+            if (location.href.includes('/html')) {
+                location.href = '404.html';
+            } else {
+                location.href = 'html/404.html';
+            }
         }
 
     }
